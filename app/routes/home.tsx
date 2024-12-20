@@ -1,17 +1,21 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import type { Route } from './+types/home';
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
-
-export function loader({ context }: Route.LoaderArgs) {
-  return { message: context.VALUE_FROM_VERCEL };
+	return [
+		{ title: 'Habbit' },
+		{ name: 'description', content: 'Simple Habit Tracker' },
+	];
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+	return (
+		<main className='container mx-auto max-w-screen-sm w-full'>
+			<nav className='h-14 w-full flex items-center justify-between  px-4 border-b input-bordered'>
+				<h2 className='text-xl font-semibold'>Habbit</h2>
+				<button className='capitalize btn btn-primary btn-sm'>
+					new habbit
+				</button>
+			</nav>
+		</main>
+	);
 }
