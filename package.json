@@ -8,6 +8,7 @@
 		"typecheck": "react-router typegen && tsc"
 	},
 	"dependencies": {
+		"@heroicons/react": "^2.2.0",
 		"@react-router/express": "^7.0.2",
 		"@react-router/node": "^7.0.2",
 		"@vercel/node": "^3.2.25",
